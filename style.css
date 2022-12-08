@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-dark: #F0EEF1;
+    --background-light: #ffffff;
+
+    --border-dark: #000000;
+
+    --font-color-light: #3d3c3c;
+}
+
+body {
+    font-family: poppins, sans-serif;
+    text-align: center;
+
+    background-color: var(--background-dark);
+    line-height: 1.7;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+
+/* HEADER */
+header {
+    padding: 24px;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 1.4rem;
+    background-color: var(--background-light);
+    font-family: 'Lora', serif;
+}
+
+h1 i {
+    margin-right: 18px;
+}
+
+
+/* MAIN */
+form {
+    margin: 50px;
+}
+
+input {
+    border-style: none;
+    font-size: 1.1rem;
+    padding: 12px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--background-light);
+}
+
+input[type=text]:focus {
+    outline: none;
+    border: 2px solid var(--border-dark);
+}
+
+input:hover {
+    border: 2px solid var(--border-dark);
+}
+
+/* display result box*/
+.search-result {
+    display: none;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: var(--background-light);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
+}
+
+.search-result.active {
+    display: block;
+}
+
+article p {
+    font-size: 1.3rem;
+    color: var(--font-color-light);
+
+}
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 30px;
+    width: 100%; 
+    gap: 8px;
+    font-size: 1.1rem;
+    padding: 10px;
+    font-weight: 700;
+}
+
+a {
+    color: inherit;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.4);
+    transition: transform 0.3s ease-in-out;
+    color: var(--font-color-light);
+}

@@ -7,6 +7,7 @@ const wind = document.querySelector('#wind');
 
 const searchInput = document.querySelector('input');
 const searchForm = document.querySelector('form');
+const searchResult = document.querySelector(".search-result");
 
 
 // Input Submit listen
@@ -15,6 +16,7 @@ searchForm.addEventListener('submit', (event) => {
   if (searchInput.value === '') return;
 
   displayResult(searchInput.value);
+  searchInput.value = '';
 });
 
 
@@ -22,6 +24,8 @@ searchForm.addEventListener('submit', (event) => {
 async function displayResult(userInputCityName) {
   const data = await getData(userInputCityName);
   if (!data) return;
+  
+  searchResult.classList.add("active");
 
   cityName.textContent = data.cityName;
   temperature.textContent = `${data.temperature} °C`;
@@ -59,6 +63,3 @@ function processData(cityWeatherData) {
     cityName, temperature, feelsLike, humidity, windSpeed,
   };
 }
-
-
-displayResult('0-0-');
